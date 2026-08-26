@@ -40,160 +40,114 @@
     <!-- Section-->
     <section class="py-1 px-0">
         <div class="container">
-            <div class="row row-cols-md-12 justify-content-center">
+            <div class="row row-cols-1 align-items-center">
                 <!-- Product image-->
-                <img class="card-img-top" src="images/guava_2026_autumn.jpg" alt="..." />
+                <img class="img-fluid" src="images/guava_2026_autumn.jpg" alt="...">
                 <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-left">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder">【帝王芭樂】2026/8/22</h5>
-                        <p>
-                            <br>
-                            初秋的帝王芭樂已開始少量採收出貨，產期預計到10月底，出貨規格為4台斤 或 6台斤，歡迎訂購～🙏<br>
-                            <br>
-                            尚需等待芭樂熟成、採收、出貨，無法立即出貨，請見諒！芭樂將低溫出貨，建議您收到後立刻放入冰箱，以增長保存時間。<br>
-                            <br>
-                            📌4台斤芭樂 + 3台斤百香果 或 6台斤芭樂 + 5台斤百香果，可以打包冷藏出貨。<br>
-                            </br>
-                            <button class="btn" id="btnBlank" type="button"
-                                style="background-color: #a0b75d; color: white" data-bs-toggle="collapse"
-                                data-bs-target="#blankCollapse" aria-expanded="false"
-                                aria-controls="blankCollapse">👉空白訂購單</button>
-                        <div class="collapse" id="blankCollapse">
-                            <form>
-                                <div class="row g-1 py-1 align-items-center">
-                                    <div class="col-auto">
-                                        <label class="col-form-label">1.</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <select class="form-select" id="formLevel1" aria-label="">
-                                            <option selected>選擇等級</option>
-                                            <option value="1">正規品</option>
-                                            <option value="2">格外品</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-auto">
-                                        <select class="form-select" id="formSpec1" aria-label="">
-                                            <option selected>選擇重量</option>
-                                            <option value="1">4台斤</option>
-                                            <option value="2">6台斤</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input class="form-control" type="number" id="formNumber1" placeholder="數量">
-                                    </div>
-                                    <div class="col-auto">
-                                        <label class="col-form-label">箱</label>
-                                    </div>
-                                </div>
-                                <div class="row g-1 py-1 align-items-center">
-                                    <div class="col-auto">
-                                        <label class="col-form-label">2.</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <select class="form-select" id="formLevel2" aria-label="">
-                                            <option selected>選擇等級</option>
-                                            <option value="1">正規品</option>
-                                            <option value="2">格外吅</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-auto">
-                                        <select class="form-select" id="formSpec2" aria-label="">
-                                            <option selected>選擇重量</option>
-                                            <option value="1">4台斤</option>
-                                            <option value="2">6台斤</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input class="form-control" type="number" id="formNumber2" placeholder="數量">
-                                    </div>
-                                    <div class="col-auto">
-                                        <label class="col-form-label">箱</label>
-                                    </div>
-                                </div>
-                                <div class="row g-1 py-1 align-items-center">
-                                    <div class="col-auto">
-                                        <label class="col-form-label">3.</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <select class="form-select" id="formLevel3" aria-label="">
-                                            <option selected>選擇等級</option>
-                                            <option value="1">正規品</option>
-                                            <option value="2">格外品</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-auto">
-                                        <select class="form-select" id="formSpec3" aria-label="">
-                                            <option selected>選擇重量</option>
-                                            <option value="1">4台斤</option>
-                                            <option value="2">6台斤</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input class="form-control" type="number" id="formNumber3" placeholder="數量">
-                                    </div>
-                                    <div class="col-auto">
-                                        <label class="col-form-label">箱</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    &nbsp;
-                                </div>
-                                <div class="row g-1 py-1 align-items-center">
-                                    <div class="col-auto">
-                                        <label class="col-form-label" for="formReceiver">收件人：</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input class="form-control" type="text" id="formReceiver" placeholder="收件人姓名">
-                                    </div>
-                                </div>
-                                <div class="row g-1 py-1 align-items-center">
-                                    <div class="col-auto">
-                                        <label class="col-form-label" for="formPhone">電話：</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input class="form-control" type="text" id="formPhone" placeholder="電話">
-                                    </div>
-                                </div>
-                                <div class="row g-1 py-1 align-items-center">
-                                    <div class="col-auto">
-                                        <label class="col-form-label" for="formAddress">地址：</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input class="form-control" type="text" id="formAddress" placeholder="地址">
-                                    </div>
-                                </div>
-                                <div class="row g-1 py-1 align-items-center">
-                                    <div class="col-auto">
-                                        <label class="col-form-label" for="formSender">*加註寄件人：</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input class="form-control" type="text" id="formSender" placeholder="寄件人姓名">
-                                    </div>
-                                </div>
-                                <div class="row g-1 py-1 align-items-center">
-                                    <div class="col-auto">
-                                        <label class="col-form-label">*付款方式：</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <select class="form-select" id="formPayment" aria-label="">
-                                            <option selected>選擇付款方式</option>
-                                            <option value="1">轉帳</option>
-                                            <option value="2">貨到付款（加收手續費30元）</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                <div class="text-start">
+                    <h5 class="fw-bold">【帝王芭樂】2026/8/22</h5>
+                    <br>
+                    初秋的帝王芭樂已開始少量採收出貨，產期預計到10月底，出貨規格為4台斤 或 6台斤，歡迎訂購～🙏<br>
+                    <br>
+                    尚需等待芭樂熟成、採收、出貨，無法立即出貨，請見諒！芭樂將低溫出貨，建議您收到後立刻放入冰箱，以增長保存時間。<br>
+                    <br>
+                    📌4台斤芭樂 + 3台斤百香果 或 6台斤芭樂 + 5台斤百香果，可以打包冷藏出貨。<br>
+                    </br>
+                    <button class="btn" id="btnBlank" type="button" style="background-color: #a0b75d; color: white"
+                        data-bs-toggle="collapse" data-bs-target="#blankCollapse" aria-expanded="false"
+                        aria-controls="blankCollapse">👉填寫訂購內容</button>
+                    <div class="collapse" id="blankCollapse">
+                        <form>
+                            <div class="row g-1 py-1 align-items-center">
+                                <label class="col col-auto col-form-label" for="formLevel1">1.</label>
+                                <select class="col form-select" id="formLevel1" aria-label="">
+                                    <option selected>選擇等級</option>
+                                    <option value="1">正規品</option>
+                                    <option value="2">格外品</option>
+                                </select>
+                                <select class="col form-select" id="formSpec1" aria-label="">
+                                    <option selected>選擇重量</option>
+                                    <option value="1">4台斤</option>
+                                    <option value="2">6台斤</option>
+                                </select>
+                                <input class="col form-control" type="number" id="formNumber1" placeholder="數量">
+                                <label class="col col-auto col-form-label" for="formNumber1">箱</label>
+                            </div>
+                            <div class="row g-1 py-1 align-items-center">
+                                <label class="col col-auto col-form-label" for="formLevel2">2.</label>
+                                <select class="col form-select" id="formLevel2" aria-label="">
+                                    <option selected>選擇等級</option>
+                                    <option value="1">正規品</option>
+                                    <option value="2">格外品</option>
+                                </select>
+                                <select class="col form-select" id="formSpec2" aria-label="">
+                                    <option selected>選擇重量</option>
+                                    <option value="1">4台斤</option>
+                                    <option value="2">6台斤</option>
+                                </select>
+                                <input class="col form-control" type="number" id="formNumber2" placeholder="數量">
+                                <label class="col col-auto col-form-label" for="formNumber2">箱</label>
+                            </div>
+                            <div class="row g-1 py-1 align-items-center">
+                                <label class="col col-auto col-form-label" for="formLevel3">3.</label>
+                                <select class="col form-select" id="formLevel3" aria-label="">
+                                    <option selected>選擇等級</option>
+                                    <option value="1">正規品</option>
+                                    <option value="2">格外品</option>
+                                </select>
+                                <select class="col form-select" id="formSpec3" aria-label="">
+                                    <option selected>選擇重量</option>
+                                    <option value="1">4台斤</option>
+                                    <option value="2">6台斤</option>
+                                </select>
+                                <input class="col form-control" type="number" id="formNumber3" placeholder="數量">
+                                <label class="col col-auto col-form-label" for="formNumber3">箱</label>
+                            </div>
+                            <div class="row">
+                                &nbsp;
+                            </div>
+                            <div class="row g-1 py-1 align-items-center">
+                                <label class="col col-auto col-form-label" for="formReceiver">收件人：</label>
+                                <input class="col form-control" type="text" id="formReceiver" placeholder="收件人姓名">
+                            </div>
+                            <div class="row g-1 py-1 align-items-center">
+                                <label class="col col-auto col-form-label" for="formPhone">電話：</label>
+                                <input class="col form-control" type="text" id="formPhone" placeholder="電話">
+                            </div>
+                            <div class="row g-1 py-1 align-items-center">
+                                <label class="col col-auto col-form-label" for="formAddress">地址：</label>
+                                <input class="col form-control" type="text" id="formAddress" placeholder="地址">
+                            </div>
+                            <div class="row g-1 py-1 align-items-center">
+                                <label class="col col-auto col-form-label" for="formSender">*加註寄件人：</label>
+                                <input class="col form-control" type="text" id="formSender" placeholder="寄件人姓名">
+                            </div>
+                            <div class="row g-1 py-1 align-items-center">
+                                <label class="col col-auto col-form-label" for="formPayment">付款方式：</label>
+                                <select class="col form-select" id="formPayment" aria-label="">
+                                    <option selected>選擇付款方式</option>
+                                    <option value="1">轉帳</option>
+                                    <option value="2">貨到付款（加收手續費30元）</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                &nbsp;
+                            </div>
+                        </form>
+                        <button class="btn" id="btnCopy" type="button" style="background-color: #b7905d; color: white"
+                            data-bs-toggle="collapse" data-bs-target="#blankCollapse" aria-expanded="true"
+                            aria-controls="blankCollapse">👉複製訂單內容</button>
+                        &nbsp;&nbsp;複製後，請回到LINE聊天室，將訂單內容貼上，傳送給我們即可。
                         <br>
-                        ☘️～🐞～☘️～🐞～☘️<br>
-                        <br>
-                        帝王芭樂的外型圓碩，表皮有明顯的凹凸。其口感清脆，清甜中帶有果酸味，還保留了土芭樂獨特的自然香氣。<br>
-                        <br>
-                        由於種植難度高、易受病蟲害、以及採收熟度難以掌握等，需要特別的照護，這些因素都導致其產量稀少，但也因此成為市場上珍貴的芭樂品種。目前台灣的帝王芭樂市佔率約為5%，而珍珠芭樂市佔率約90%。<br>
-                        </p>
                     </div>
+                    <br>
+                    <br>
+                    ☘️～🐞～☘️～🐞～☘️<br>
+                    <br>
+                    帝王芭樂的外型圓碩，表皮有明顯的凹凸。其口感清脆，清甜中帶有果酸味，還保留了土芭樂獨特的自然香氣。<br>
+                    <br>
+                    由於種植難度高、易受病蟲害、以及採收熟度難以掌握等，需要特別的照護，這些因素都導致其產量稀少，但也因此成為市場上珍貴的芭樂品種。目前台灣的帝王芭樂市佔率約為5%，而珍珠芭樂市佔率約90%。<br>
+                    <br>
                 </div>
             </div>
         </div>
@@ -206,88 +160,83 @@
     </footer>
     <script>
         $(document).ready(function () {
-            $("#btnBlank").click(function () {
-                if ($(this).attr("aria-expanded") == "true") {
-                    $(this).text("👉複製訂購單")
-                } else {
-                    let copyText = "訂購品項：有機芭樂\n";
-                    let copySpec = "";
-                    let copyInfo = "";
-                    if ($("#formLevel1").val() != "選擇等級") {
-                        copySpec += $("#formLevel1 option:selected").text();
-                    }
-                    if ($("#formSpec1").val() != "選擇重量") {
-                        copySpec += "  " + $("#formSpec1 option:selected").text() + "：";
-                    }
-                    if ($("#formNumber1").val() != "") {
-                        copySpec += "  " + $("#formNumber1").val() + " 箱";
-                    }
-                    if (copySpec.length > 0) {
-                        copyText += "#" + copySpec + "\n";
-                    }
-                    copySpec = "";
-                    if ($("#formLevel2").val() != "選擇等級") {
-                        copySpec += $("#formLevel2 option:selected").text();
-                    }
-                    if ($("#formSpec2").val() != "選擇重量") {
-                        copySpec += "  " + $("#formSpec2 option:selected").text() + "：";
-                    }
-                    if ($("#formNumber2").val() != "") {
-                        copySpec += "  " + $("#formNumber2").val() + " 箱";
-                    }
-                    if (copySpec.length > 0) {
-                        copyText += "#" + copySpec + "\n";
-                    }
-                    copySpec = "";
-                    if ($("#formLevel3").val() != "選擇等級") {
-                        copySpec += $("#formLevel3 option:selected").text();
-                    }
-                    if ($("#formSpec3").val() != "選擇重量") {
-                        copySpec += "  " + $("#formSpec3 option:selected").text() + "：";
-                    }
-                    if ($("#formNumber3").val() != "") {
-                        copySpec += "  " + $("#formNumber3").val() + " 箱";
-                    }
-                    if (copySpec.length > 0) {
-                        copyText += "#" + copySpec + "\n";
-                    }
-                    if (copyText.length > 10) {
-                        if ($("#formReceiver").val() != "") {
-                            copyInfo += "收件人：" + $("#formReceiver").val() + "\n";
-                        } else {
-                            copyInfo += "收件人：\n";
-                        }
-                        if ($("#formPhone").val() != "") {
-                            copyInfo += "電話：" + $("#formPhone").val() + "\n";
-                        } else {
-                            copyInfo += "電話：\n";
-                        }
-                        if ($("#formAddress").val() != "") {
-                            copyInfo += "地址：" + $("#formAddress").val() + "\n";
-                        } else {
-                            copyInfo += "地址：\n";
-                        }
-                        if ($("#formSender").val() != "") {
-                            copyInfo += "*加註寄件人：" + $("#formSender").val() + "\n";
-                        } else {
-                            copyInfo += "*加註寄件人：\n";
-                        }
-                        if ($("#formPayment").val() != "選擇付款方式") {
-                            copyInfo += "*付款方式：" + $("#formPayment option:selected").text();
-                        } else {
-                            copyInfo += "*付款方式：轉帳";
-                        }
-                        if (copyInfo.length > 0) {
-                            copyText += "\n" + copyInfo;
-                        }
-                    }
-                    if (copyText.length == 10) {
-                        copyText = "";
-                    }
-                    navigator.clipboard.writeText(copyText);
-
-                    $(this).text("👉空白訂購單")
+            $("#btnCopy").click(function () {
+                let copyText = "訂購品項：有機芭樂\n";
+                let copySpec = "";
+                let copyInfo = "";
+                if ($("#formLevel1").val() != "選擇等級") {
+                    copySpec += $("#formLevel1 option:selected").text();
                 }
+                if ($("#formSpec1").val() != "選擇重量") {
+                    copySpec += "  " + $("#formSpec1 option:selected").text() + "：";
+                }
+                if ($("#formNumber1").val() != "") {
+                    copySpec += "  " + $("#formNumber1").val() + " 箱";
+                }
+                if (copySpec.length > 0) {
+                    copyText += "#" + copySpec + "\n";
+                }
+                copySpec = "";
+                if ($("#formLevel2").val() != "選擇等級") {
+                    copySpec += $("#formLevel2 option:selected").text();
+                }
+                if ($("#formSpec2").val() != "選擇重量") {
+                    copySpec += "  " + $("#formSpec2 option:selected").text() + "：";
+                }
+                if ($("#formNumber2").val() != "") {
+                    copySpec += "  " + $("#formNumber2").val() + " 箱";
+                }
+                if (copySpec.length > 0) {
+                    copyText += "#" + copySpec + "\n";
+                }
+                copySpec = "";
+                if ($("#formLevel3").val() != "選擇等級") {
+                    copySpec += $("#formLevel3 option:selected").text();
+                }
+                if ($("#formSpec3").val() != "選擇重量") {
+                    copySpec += "  " + $("#formSpec3 option:selected").text() + "：";
+                }
+                if ($("#formNumber3").val() != "") {
+                    copySpec += "  " + $("#formNumber3").val() + " 箱";
+                }
+                if (copySpec.length > 0) {
+                    copyText += "#" + copySpec + "\n";
+                }
+                if (copyText.length > 10) {
+                    if ($("#formReceiver").val() != "") {
+                        copyInfo += "收件人：" + $("#formReceiver").val() + "\n";
+                    } else {
+                        copyInfo += "收件人：\n";
+                    }
+                    if ($("#formPhone").val() != "") {
+                        copyInfo += "電話：" + $("#formPhone").val() + "\n";
+                    } else {
+                        copyInfo += "電話：\n";
+                    }
+                    if ($("#formAddress").val() != "") {
+                        copyInfo += "地址：" + $("#formAddress").val() + "\n";
+                    } else {
+                        copyInfo += "地址：\n";
+                    }
+                    if ($("#formSender").val() != "") {
+                        copyInfo += "*加註寄件人：" + $("#formSender").val() + "\n";
+                    } else {
+                        copyInfo += "*加註寄件人：\n";
+                    }
+                    if ($("#formPayment").val() != "選擇付款方式") {
+                        copyInfo += "*付款方式：" + $("#formPayment option:selected").text();
+                    } else {
+                        copyInfo += "*付款方式：轉帳";
+                    }
+                    if (copyInfo.length > 0) {
+                        copyText += "\n" + copyInfo;
+                    }
+                }
+                if (copyText.length == 10) {
+                    copyText = "";
+                }
+                alert(copyText);
+                navigator.clipboard.writeText(copyText);
             });
         });
     </script>

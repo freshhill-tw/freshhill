@@ -116,7 +116,7 @@
                             </div>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formAddress">地址：</label>
-                                <input class="col form-control" type="text" id="formAddress" placeholder="地址">
+                                <input class="col form-control" type="text" id="formAddress" placeholder="請在聊天室中輸入..." disabled>
                             </div>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formSender">*加註寄件人：</label>
@@ -184,11 +184,7 @@
                     } else {
                         copyText += "電話：\n";
                     }
-                    if ($("#formAddress").val() != "") {
-                        copyText += "地址：" + $("#formAddress").val() + "\n";
-                    } else {
-                        copyText += "地址：\n";
-                    }
+                    copyText += "地址：\n";
                     if ($("#formSender").val() != "") {
                         copyText += "*加註寄件人：" + $("#formSender").val() + "\n";
                     } else {

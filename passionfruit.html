@@ -122,7 +122,7 @@
                             </div>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formAddress">地址：</label>
-                                <input class="col form-control" type="text" id="formAddress" placeholder="地址">
+                                <input class="col form-control" type="text" id="formAddress" placeholder="請在聊天室中輸入..." disabled>
                             </div>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formSender">*加註寄件人：</label>
@@ -170,7 +170,7 @@
     <script>
         $(document).ready(function () {
             $("#btnCopy").click(function () {
-                let copyText = "訂購品項：有機芭樂\n";
+                let copyText = "訂購品項：有機百香果\n";
                 if ($("#formLevel1").val() != "選擇等級" && $("#formSpec1").val() != "選擇重量" && $("#formNumber1").val() != "") {
                     copyText += "#" + $("#formLevel1 option:selected").text() + "  " + $("#formSpec1 option:selected").text() + "：  " + $("#formNumber1").val() + " 箱\n";
                 }
@@ -192,20 +192,16 @@
                     } else {
                         copyText += "電話：\n";
                     }
-                    if ($("#formAddress").val() != "") {
-                        copyText += "地址：" + $("#formAddress").val() + "\n";
-                    } else {
-                        copyText += "地址：\n";
-                    }
+                    copyText += "地址：\n";
                     if ($("#formSender").val() != "") {
                         copyText += "*加註寄件人：" + $("#formSender").val() + "\n";
                     } else {
                         copyText += "*加註寄件人：\n";
                     }
                     if ($("#formPayment").val() != "選擇付款方式") {
-                        copyText += "*付款方式：" + $("#formPayment option:selected").text();
+                        copyText += "付款方式：" + $("#formPayment option:selected").text();
                     } else {
-                        copyText += "*付款方式：轉帳";
+                        copyText += "付款方式：轉帳";
                     }
                 } else {
                     copyText = "";

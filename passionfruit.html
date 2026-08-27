@@ -40,22 +40,24 @@
     <!-- Section -->
     <section class="py-1 px-0">
         <div class="container">
-            <div class="row row-cols-1 justify-content-center">
+            <div class="row row-cols-1 align-items-center">
                 <!-- Image -->
                 <img class="img-fluid" src="images/passionfruit_2026_autumn.jpg" alt="..." />
                 <!-- Content -->
                 <div class="text-start">
                     <h5 class="fw-bold">【藍星百香果】2026/8/22</h5>
-                    <br>
-                    初秋的藍星百香果已開始少量採收出貨，歡迎訂購～🙏<br>
-                    <br>
-                    尚需等待百香果熟成、採收、出貨，無法立即出貨，請見諒！<br>
-                    <br>
-                    📌3台斤百香果 + 4台斤芭樂 或 5台斤百香果 + 6台斤芭樂，可以打包冷藏出貨。<br>
-                    </br>
+                    <p>
+                        <br>
+                        初秋的藍星百香果已開始少量採收出貨，歡迎訂購～🙏<br>
+                        <br>
+                        尚需等待百香果熟成、採收、出貨，無法立即出貨，請見諒！<br>
+                        <br>
+                        📌3台斤百香果 + 4台斤芭樂 或 5台斤百香果 + 6台斤芭樂，可以打包冷藏出貨。<br>
+                    </p>
                     <button class="btn" id="btnBlank" type="button" style="background-color: #a0b75d; color: white"
                         data-bs-toggle="collapse" data-bs-target="#blankCollapse" aria-expanded="false"
-                        aria-controls="blankCollapse">👉空白訂購單</button>
+                        aria-controls="blankCollapse">👉填寫訂購內容</button>
+                    <div class="row">&nbsp;</div>
                     <div class="collapse" id="blankCollapse">
                         <form>
                             <div class="row g-1 py-1 align-items-center">
@@ -109,9 +111,7 @@
                                 <input class="col form-control" type="number" id="formNumber3" placeholder="數量">
                                 <label class="col col-auto col-form-label" for="formNumber3">箱</label>
                             </div>
-                            <div class="row">
-                                &nbsp;
-                            </div>
+                            <div class="row">&nbsp;</div>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formReceiver">收件人：</label>
                                 <input class="col form-control" type="text" id="formReceiver" placeholder="收件人姓名">
@@ -122,7 +122,8 @@
                             </div>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formAddress">地址：</label>
-                                <input class="col form-control" type="text" id="formAddress" placeholder="請在聊天室中輸入..." disabled>
+                                <input class="col form-control" type="text" id="formAddress" placeholder="請在聊天室中輸入..."
+                                    disabled>
                             </div>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formSender">*加註寄件人：</label>
@@ -136,26 +137,23 @@
                                     <option value="2">貨到付款（加收手續費30元）</option>
                                 </select>
                             </div>
-                            <div class="row">
-                                &nbsp;
-                            </div>
+                            <div class="row">&nbsp;</div>
                         </form>
-                        <button class="btn" id="btnCopy" type="button" style="background-color: #b7905d; color: white"
-                            data-bs-toggle="collapse" data-bs-target="#blankCollapse" aria-expanded="true"
-                            aria-controls="blankCollapse">👉複製訂單內容</button>
-                        &nbsp;&nbsp;複製後，請回到LINE聊天室，將訂單內容貼上，傳送給我們即可。
-                        <br>
+                        <button class="btn" id="btnCopy" type="button"
+                            style="background-color: #b7905d; color: white">👉複製訂單內容</button>
+                        <div id="alertPlaceHolder"></div>
+                        <div class="row">&nbsp;</div>
                     </div>
-                    <br>
-                    <br>
-                    ☘️～🐞～☘️～🐞～☘️<br>
-                    <br>
-                    藍星百香果是由「台農一號」與「滿天星」雜交後，培育出的新品種，它完美結合了兩者的優點，具備滿天星的高甜度低酸度特性，以及台農一號的香氣，還帶有特殊的花果香。<br>
-                    <br>
-                    百香果是會後熟的水果，即在室溫保存下仍會繼續熟成。百香果在熟成的過程中，蒂頭會由青綠色轉成黃褐色，果皮顏色也漸漸會由紅色轉成紫紅色，此時即是百香果的最佳賞味時間。<br>
-                    <br>
-                    收到百香果後，請立即打開紙箱或取出保持通風。雖然百香果可於室內放置數日，為避免高溫造成熟化過快，建議您儘早放入冰箱保存，夏季在3~4日內、秋冬季在5~7日內，用紙袋包裹後裝入塑膠袋，放入冷藏以延長保鮮期，並請盡快食用以保新鮮。<br>
-                    <br>
+                    <p>
+                        ☘️～🐞～☘️～🐞～☘️<br>
+                        <br>
+                        藍星百香果是由「台農一號」與「滿天星」雜交後，培育出的新品種，它完美結合了兩者的優點，具備滿天星的高甜度低酸度特性，以及台農一號的香氣，還帶有特殊的花果香。<br>
+                        <br>
+                        百香果是會後熟的水果，即在室溫保存下仍會繼續熟成。百香果在熟成的過程中，蒂頭會由青綠色轉成黃褐色，果皮顏色也漸漸會由紅色轉成紫紅色，此時即是百香果的最佳賞味時間。<br>
+                        <br>
+                        收到百香果後，請立即打開紙箱或取出保持通風。雖然百香果可於室內放置數日，為避免高溫造成熟化過快，建議您儘早放入冰箱保存，夏季在3~4日內、秋冬季在5~7日內，用紙袋包裹後裝入塑膠袋，放入冷藏以延長保鮮期，並請盡快食用以保新鮮。<br>
+                        <br>
+                    </p>
                 </div>
             </div>
         </div>
@@ -205,6 +203,25 @@
                     }
                 } else {
                     copyText = "";
+                }
+                if (copyText.length > 11) {
+                    const messageAlert = document.createElement('div')
+                    messageAlert.innerHTML = [
+                        '<div class="alert alert-success alert-dismissible" role="alert">',
+                        '   <div>已複製訂單內容，請回到LINE聊天室，貼上內容，傳送給我們～🙏</div>',
+                        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                        '</div>'
+                    ].join('')
+                    $("#alertPlaceHolder").append(messageAlert);
+                } else {
+                    const messageAlert = document.createElement('div')
+                    messageAlert.innerHTML = [
+                        '<div class="alert alert-danger alert-dismissible" role="alert">',
+                        '   <div>請至少選擇一個訂購品項！</div>',
+                        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                        '</div>'
+                    ].join('')
+                    $("#alertPlaceHolder").append(messageAlert);
                 }
                 //console.log(copyText);
                 navigator.clipboard.writeText(copyText);

@@ -46,16 +46,18 @@
                 <!-- Content -->
                 <div class="text-start">
                     <h5 class="fw-bold">【帝王芭樂】2026/8/22</h5>
-                    <br>
-                    初秋的帝王芭樂已開始少量採收出貨，產期預計到10月底，出貨規格為4台斤 或 6台斤，歡迎訂購～🙏<br>
-                    <br>
-                    尚需等待芭樂熟成、採收、出貨，無法立即出貨，請見諒！芭樂將低溫出貨，建議您收到後立刻放入冰箱，以增長保存時間。<br>
-                    <br>
-                    📌4台斤芭樂 + 3台斤百香果 或 6台斤芭樂 + 5台斤百香果，可以打包冷藏出貨。<br>
-                    </br>
+                    <p>
+                        <br>
+                        初秋的帝王芭樂已開始少量採收出貨，產期預計到10月底，出貨規格為4台斤 或 6台斤，歡迎訂購～🙏<br>
+                        <br>
+                        尚需等待芭樂熟成、採收、出貨，無法立即出貨，請見諒！芭樂將低溫出貨，建議您收到後立刻放入冰箱，以增長保存時間。<br>
+                        <br>
+                        📌4台斤芭樂 + 3台斤百香果 或 6台斤芭樂 + 5台斤百香果，可以打包冷藏出貨。<br>
+                    </p>
                     <button class="btn" id="btnBlank" type="button" style="background-color: #a0b75d; color: white"
                         data-bs-toggle="collapse" data-bs-target="#blankCollapse" aria-expanded="false"
                         aria-controls="blankCollapse">👉填寫訂購內容</button>
+                    <div class="row">&nbsp;</div>
                     <div class="collapse" id="blankCollapse">
                         <form>
                             <div class="row g-1 py-1 align-items-center">
@@ -103,9 +105,7 @@
                                 <input class="col form-control" type="number" id="formNumber3" placeholder="數量">
                                 <label class="col col-auto col-form-label" for="formNumber3">箱</label>
                             </div>
-                            <div class="row">
-                                &nbsp;
-                            </div>
+                            <div class="row">&nbsp;</div>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formReceiver">收件人：</label>
                                 <input class="col form-control" type="text" id="formReceiver" placeholder="收件人姓名">
@@ -116,7 +116,8 @@
                             </div>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formAddress">地址：</label>
-                                <input class="col form-control" type="text" id="formAddress" placeholder="請在聊天室中輸入..." disabled>
+                                <input class="col form-control" type="text" id="formAddress" placeholder="請在聊天室中輸入..."
+                                    disabled>
                             </div>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formSender">*加註寄件人：</label>
@@ -130,24 +131,21 @@
                                     <option value="2">貨到付款（加收手續費30元）</option>
                                 </select>
                             </div>
-                            <div class="row">
-                                &nbsp;
-                            </div>
+                            <div class="row">&nbsp;</div>
                         </form>
-                        <button class="btn" id="btnCopy" type="button" style="background-color: #b7905d; color: white"
-                            data-bs-toggle="collapse" data-bs-target="#blankCollapse" aria-expanded="true"
-                            aria-controls="blankCollapse">👉複製訂單內容</button>
-                        &nbsp;&nbsp;複製後，請回到LINE聊天室，將訂單內容貼上，傳送給我們即可。
-                        <br>
+                        <button class="btn" id="btnCopy" type="button"
+                            style="background-color: #b7905d; color: white">👉複製訂單內容</button>
+                        <div id="alertPlaceHolder"></div>
+                        <div class="row">&nbsp;</div>
                     </div>
-                    <br>
-                    <br>
-                    ☘️～🐞～☘️～🐞～☘️<br>
-                    <br>
-                    帝王芭樂的外型圓碩，表皮有明顯的凹凸。其口感清脆，清甜中帶有果酸味，還保留了土芭樂獨特的自然香氣。<br>
-                    <br>
-                    由於種植難度高、易受病蟲害、以及採收熟度難以掌握等，需要特別的照護，這些因素都導致其產量稀少，但也因此成為市場上珍貴的芭樂品種。目前台灣的帝王芭樂市佔率約為5%，而珍珠芭樂市佔率約90%。<br>
-                    <br>
+                    <p>
+                        ☘️～🐞～☘️～🐞～☘️<br>
+                        <br>
+                        帝王芭樂的外型圓碩，表皮有明顯的凹凸。其口感清脆，清甜中帶有果酸味，還保留了土芭樂獨特的自然香氣。<br>
+                        <br>
+                        由於種植難度高、易受病蟲害、以及採收熟度難以掌握等，需要特別的照護，這些因素都導致其產量稀少，但也因此成為市場上珍貴的芭樂品種。目前台灣的帝王芭樂市佔率約為5%，而珍珠芭樂市佔率約90%。<br>
+                        <br>
+                    </p>
                 </div>
             </div>
         </div>
@@ -197,6 +195,25 @@
                     }
                 } else {
                     copyText = "";
+                }
+                if (copyText.length > 10) {
+                    const messageAlert = document.createElement('div')
+                    messageAlert.innerHTML = [
+                        '<div class="alert alert-success alert-dismissible" role="alert">',
+                        '   <div>已複製訂單內容，請回到LINE聊天室，貼上內容，傳送給我們～🙏</div>',
+                        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                        '</div>'
+                    ].join('')
+                    $("#alertPlaceHolder").append(messageAlert);
+                } else {
+                    const messageAlert = document.createElement('div')
+                    messageAlert.innerHTML = [
+                        '<div class="alert alert-danger alert-dismissible" role="alert">',
+                        '   <div>請至少選擇一個訂購品項！</div>',
+                        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                        '</div>'
+                    ].join('')
+                    $("#alertPlaceHolder").append(messageAlert);
                 }
                 //console.log(copyText);
                 navigator.clipboard.writeText(copyText);

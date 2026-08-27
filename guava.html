@@ -7,18 +7,18 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>卓沐有機農場</title>
-    <!-- Favicon-->
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- Core theme CSS (includes Bootstrap) -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Bootstrap core JS-->
+    <!-- Bootstrap core JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- JQuery JS-->
+    <!-- JQuery JS -->
     <script src="js/jquery-4.0.0.min.js"></script>
-    <!-- Navigation-->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg" style="background-color: #f1f8ee;" data-bs-theme="light">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" style="color: #627a4a;" href="#!">卓沐有機農場</a>
@@ -37,13 +37,13 @@
             </div>
         </div>
     </nav>
-    <!-- Section-->
+    <!-- Section -->
     <section class="py-1 px-0">
         <div class="container">
             <div class="row row-cols-1 align-items-center">
-                <!-- Product image-->
+                <!-- Image -->
                 <img class="img-fluid" src="images/guava_2026_autumn.jpg" alt="...">
-                <!-- Product details-->
+                <!-- Content -->
                 <div class="text-start">
                     <h5 class="fw-bold">【帝王芭樂】2026/8/22</h5>
                     <br>
@@ -152,90 +152,57 @@
             </div>
         </div>
     </section>
-    <!-- Footer-->
+    <!-- Footer -->
     <footer class="py-4" style="background-color: #a0b75d;">
         <div class="container">
             <p class="m-0 text-center text-light">Copyright &copy; 卓沐有機農場 2026</p>
         </div>
     </footer>
+    <!-- Script -->
     <script>
         $(document).ready(function () {
             $("#btnCopy").click(function () {
                 let copyText = "訂購品項：有機芭樂\n";
-                let copySpec = "";
-                let copyInfo = "";
-                if ($("#formLevel1").val() != "選擇等級") {
-                    copySpec += $("#formLevel1 option:selected").text();
+                if ($("#formLevel1").val() != "選擇等級" && $("#formSpec1").val() != "選擇重量" && $("#formNumber1").val() != "") {
+                    copyText += "#" + $("#formLevel1 option:selected").text() + "  " + $("#formSpec1 option:selected").text() + "：  " + $("#formNumber1").val() + " 箱\n";
                 }
-                if ($("#formSpec1").val() != "選擇重量") {
-                    copySpec += "  " + $("#formSpec1 option:selected").text() + "：";
+                if ($("#formLevel2").val() != "選擇等級" && $("#formSpec2").val() != "選擇重量" && $("#formNumber2").val() != "") {
+                    copyText += "#" + $("#formLevel2 option:selected").text() + "  " + $("#formSpec2 option:selected").text() + "：  " + $("#formNumber2").val() + " 箱\n";
                 }
-                if ($("#formNumber1").val() != "") {
-                    copySpec += "  " + $("#formNumber1").val() + " 箱";
-                }
-                if (copySpec.length > 0) {
-                    copyText += "#" + copySpec + "\n";
-                }
-                copySpec = "";
-                if ($("#formLevel2").val() != "選擇等級") {
-                    copySpec += $("#formLevel2 option:selected").text();
-                }
-                if ($("#formSpec2").val() != "選擇重量") {
-                    copySpec += "  " + $("#formSpec2 option:selected").text() + "：";
-                }
-                if ($("#formNumber2").val() != "") {
-                    copySpec += "  " + $("#formNumber2").val() + " 箱";
-                }
-                if (copySpec.length > 0) {
-                    copyText += "#" + copySpec + "\n";
-                }
-                copySpec = "";
-                if ($("#formLevel3").val() != "選擇等級") {
-                    copySpec += $("#formLevel3 option:selected").text();
-                }
-                if ($("#formSpec3").val() != "選擇重量") {
-                    copySpec += "  " + $("#formSpec3 option:selected").text() + "：";
-                }
-                if ($("#formNumber3").val() != "") {
-                    copySpec += "  " + $("#formNumber3").val() + " 箱";
-                }
-                if (copySpec.length > 0) {
-                    copyText += "#" + copySpec + "\n";
+                if ($("#formLevel3").val() != "選擇等級" && $("#formSpec3").val() != "選擇重量" && $("#formNumber3").val() != "") {
+                    copyText += "#" + $("#formLevel3 option:selected").text() + "  " + $("#formSpec3 option:selected").text() + "：  " + $("#formNumber3").val() + " 箱\n";
                 }
                 if (copyText.length > 10) {
+                    copyText += "\n";
                     if ($("#formReceiver").val() != "") {
-                        copyInfo += "收件人：" + $("#formReceiver").val() + "\n";
+                        copyText += "收件人：" + $("#formReceiver").val() + "\n";
                     } else {
-                        copyInfo += "收件人：\n";
+                        copyText += "收件人：\n";
                     }
                     if ($("#formPhone").val() != "") {
-                        copyInfo += "電話：" + $("#formPhone").val() + "\n";
+                        copyText += "電話：" + $("#formPhone").val() + "\n";
                     } else {
-                        copyInfo += "電話：\n";
+                        copyText += "電話：\n";
                     }
                     if ($("#formAddress").val() != "") {
-                        copyInfo += "地址：" + $("#formAddress").val() + "\n";
+                        copyText += "地址：" + $("#formAddress").val() + "\n";
                     } else {
-                        copyInfo += "地址：\n";
+                        copyText += "地址：\n";
                     }
                     if ($("#formSender").val() != "") {
-                        copyInfo += "*加註寄件人：" + $("#formSender").val() + "\n";
+                        copyText += "*加註寄件人：" + $("#formSender").val() + "\n";
                     } else {
-                        copyInfo += "*加註寄件人：\n";
+                        copyText += "*加註寄件人：\n";
                     }
                     if ($("#formPayment").val() != "選擇付款方式") {
-                        copyInfo += "*付款方式：" + $("#formPayment option:selected").text();
+                        copyText += "*付款方式：" + $("#formPayment option:selected").text();
                     } else {
-                        copyInfo += "*付款方式：轉帳";
+                        copyText += "*付款方式：轉帳";
                     }
-                    if (copyInfo.length > 0) {
-                        copyText += "\n" + copyInfo;
-                    }
-                }
-                if (copyText.length == 10) {
+                } else {
                     copyText = "";
                 }
-                alert(copyText);
+                //console.log(copyText);
                 navigator.clipboard.writeText(copyText);
             });
         });

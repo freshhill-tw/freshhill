@@ -55,10 +55,10 @@
                         📌4台斤芭樂 + 3台斤百香果 或 6台斤芭樂 + 5台斤百香果，可以打包冷藏出貨。<br>
                     </p>
                     <button class="btn" id="btnBlank" type="button" style="background-color: #a0b75d; color: white"
-                        data-bs-toggle="collapse" data-bs-target="#blankCollapse" aria-expanded="false"
-                        aria-controls="blankCollapse">👉填寫訂購內容</button>
+                        data-bs-toggle="collapse" data-bs-target="#orderCollapse" aria-expanded="false"
+                        aria-controls="orderCollapse">👉填寫訂購內容</button>
                     <div class="row">&nbsp;</div>
-                    <div class="collapse" id="blankCollapse">
+                    <div class="collapse" id="orderCollapse">
                         <form>
                             <div class="row g-1 py-1 align-items-center">
                                 <label class="col col-auto col-form-label" for="formLevel1">1.</label>
@@ -134,7 +134,7 @@
                             <div class="row">&nbsp;</div>
                         </form>
                         <button class="btn" id="btnCopy" type="button"
-                            style="background-color: #b7905d; color: white">👉複製訂單內容</button>
+                            style="background-color: #b7905d; color: white">👉複製訂購內容</button>
                         <div id="alertPlaceHolder"></div>
                         <div class="row">&nbsp;</div>
                     </div>
@@ -159,6 +159,13 @@
     <!-- Script -->
     <script>
         $(document).ready(function () {
+            $("#btnBlank").click(function () {
+                if ($(this).attr("aria-expanded") == "true") {
+                    $(this).text("👉收合訂購內容");
+                } else {
+                    $(this).text("👉填寫訂購內容");
+                } 
+            }); 
             $("#btnCopy").click(function () {
                 let copyText = "訂購品項：有機芭樂\n";
                 if ($("#formLevel1").val() != "選擇等級" && $("#formSpec1").val() != "選擇重量" && $("#formNumber1").val() != "") {
@@ -200,7 +207,7 @@
                     const messageAlert = document.createElement('div')
                     messageAlert.innerHTML = [
                         '<div class="alert alert-success alert-dismissible" role="alert">',
-                        '   <div>已複製訂單內容，請回到LINE聊天室，貼上內容，傳送給我們～🙏</div>',
+                        '   <div>已複製訂購內容，請回到LINE聊天室，貼上內容，傳送給我們～🙏</div>',
                         '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
                         '</div>'
                     ].join('')

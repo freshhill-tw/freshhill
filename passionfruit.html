@@ -140,7 +140,7 @@
                             <div class="row">&nbsp;</div>
                         </form>
                         <button class="btn" id="btnCopy" type="button"
-                            style="background-color: #b7905d; color: white">👉複製訂單內容</button>
+                            style="background-color: #b7905d; color: white">👉複製訂購內容</button>
                         <div id="alertPlaceHolder"></div>
                         <div class="row">&nbsp;</div>
                     </div>
@@ -167,6 +167,13 @@
     <!-- Script -->
     <script>
         $(document).ready(function () {
+            $("#btnBlank").click(function () {
+                if ($(this).attr("aria-expanded") == "true") {
+                    $(this).text("👉收合訂購內容");
+                } else {
+                    $(this).text("👉填寫訂購內容");
+                } 
+            }); 
             $("#btnCopy").click(function () {
                 let copyText = "訂購品項：有機百香果\n";
                 if ($("#formLevel1").val() != "選擇等級" && $("#formSpec1").val() != "選擇重量" && $("#formNumber1").val() != "") {
@@ -208,7 +215,7 @@
                     const messageAlert = document.createElement('div')
                     messageAlert.innerHTML = [
                         '<div class="alert alert-success alert-dismissible" role="alert">',
-                        '   <div>已複製訂單內容，請回到LINE聊天室，貼上內容，傳送給我們～🙏</div>',
+                        '   <div>已複製訂購內容，請回到LINE聊天室，貼上內容，傳送給我們～🙏</div>',
                         '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
                         '</div>'
                     ].join('')
